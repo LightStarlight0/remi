@@ -52,15 +52,15 @@ python widgets_overview_app.py
 
 Remi
 ===
-Remi是一个. In less than 100 Kbytes of source code, perfect for your diet.
+Remi是一个独立的Python GUI库. 只有不到100 Kbytes的源代码, 完美符合您的胃口.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/dddomodossola/remi/development/remi/res/screenshot.png" title="Widgets overview">
 </p>
 
-Remi enables developers to create platform independent GUI with Python. The entire GUI is rendered in your browser. **No HTML** is required, Remi automatically translates your Python code into HTML. When your app starts, it starts a web server that will be accessible on your network.
+Remi 允许开发者使用创建一个独立的GUI平台. 整个GUI呈现在你的浏览器中. **无需HTML** , Remi自动翻译你的python代码至HTML. 当你启动你的项目时, 它会开启一个网络服务器来运行.
 
-A basic application appears like this:
+最基础的项目如下:
 
 ```py
 import remi.gui as gui
@@ -75,26 +75,26 @@ class MyApp(App):
         self.lbl = gui.Label('Hello world!')
         self.bt = gui.Button('Press me!')
 
-        # setting the listener for the onclick event of the button
+        # 为鼠标点击按钮创造一个监听事件
         self.bt.onclick.do(self.on_button_pressed)
 
-        # appending a widget to another, the first argument is a string key
+        # 添加一个部件, 第一个参数是必须的
         container.append(self.lbl)
         container.append(self.bt)
 
-        # returning the root widget
+        # 返回到根部件
         return container
 
-    # listener function
+    # 监听事件
     def on_button_pressed(self, widget):
         self.lbl.set_text('Button pressed!')
         self.bt.set_text('Hi!')
 
-# starts the web server
+#开启服务器
 start(MyApp)
 ```
 
-In order to see the user interface, open your preferred browser and type "http://127.0.0.1:8081".
+为了能够看到效果并交互, 打开你最新的浏览器并打开"http://127.0.0.1:8081".
 You can change the URL address by specific **kwargs at `start` function call. This will be discussed later.
 
 Tested on Android, Linux, Windows.
