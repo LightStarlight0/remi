@@ -116,9 +116,9 @@ Kivy, PyQT, and PyGObject在主机上都需要额外的代码,那意味着安装
 不, 它已经包含在其中了.
 
 
-Brief tutorial
+简短的教程
 ===
-Import Remi library and some other useful stuff.
+导入Remi库和其他一些有用的东西.
 
 ```py
 import remi.gui as gui
@@ -139,54 +139,51 @@ class MyApp(App):
         return lbl
 ```
 
-Outside the main class, start the application by calling the function `start` and passing the name of the class you declared previously as the parameter:
+在主类(the main class)外, 通过调用 `start` 函数并且继承之前你命名的类的名字作为参数来启动应用程序:
 
 ```py
 # starts the webserver
 start(MyApp)
 ```
 
-Run the script. If it's all OK the GUI will be opened automatically in your browser, otherwise, you have to type in the address bar "http://127.0.0.1:8081".
+运行脚本，如果一切正常，GUI将在浏览器中自动打开，否则，你必须输入地址栏"http://127.0.0.1:8081".
 
-You can customize optional parameters in the `start` call like:
+你可以像这样在 `start` 中自定义可选参数:
 
 ```py
 start(MyApp, address='127.0.0.1', port=8081, multiple_instance=False, enable_file_cache=True, update_interval=0.1, start_browser=True)
 ```
 
-Parameters:
-- address: network interface IP
-- port: listen port
-- multiple_instance: boolean, if True multiple clients that connect to your script has different App instances (identified by unique cookie session identifier)
-- enable_file_cache: boolean, if True enable resource caching
-- update_interval: GUI update interval in seconds. If zero, the update happens at each change. If zero, the App.idle method is not called.
-- start_browser: boolean that defines if the browser should be opened automatically at startup
-- standalone: boolean, indicates where to run the application as a standard Desktop application with its own window. If False, the interface is shown in a browser webpage.
+参数(Parameters):
+- address: 网络IP接口
+- port: 监听端口
+- multiple_instance: 布尔值, 如果为True，连接到你脚本的多个客户端会有不同的应用情况（由唯一的cookie会话标识符标识）
+- enable_file_cache: 布尔值, 如果为True，会使资源缓存
+- update_interval:以秒为单位的GUI更新间隔. 如果是0，则每个更改会伴随一次更新且App.idle 方式无法被调用.
+- start_browser: 布尔值，定义浏览器是否应该在启动时自动打开
+- standalone: 布尔值, 指明了在何处运行应用程序.如果为True,则以标准窗口模式运行.如果为False，则界面显示在浏览器网页中.
 
-Additional Parameters:
-- username: for a basic HTTP authentication
-- password: for a basic HTTP authentication
-- certfile: SSL certificate filename
-- keyfile: SSL key file
-- ssl_version: authentication version (i.e. ssl.PROTOCOL_TLSv1_2). If None disables SSL encryption
+额外参数(Additional Parameters):
+- username: 为了基本的HTTP认证
+- password: 为了基本的HTTP认证
+- certfile: SSL 证书文件名
+- keyfile: SSL 密匙文件
+- ssl_version: 认证版本 (i.e. ssl.PROTOCOL_TLSv1_2). 如果禁用SSL加密.
 
 All widgets constructors accept two standards**kwargs that are:
 - width: can be expressed as int (and is interpreted as a pixel) or as str (and you can specify the measuring unit like '10%')
 - height: can be expressed as int (and is interpreted as a pixel) or as str (and you can specify the measuring unit like '10%')
 
 
-事件与回调函数
+Events and callbacks
 ===
-组件提供了一系列的事件用以用户交互。
+Widgets expose a set of events that happen during user interaction.
+Such events are a convenient way to define the application behavior.
+Each widget has its own callbacks, depending on the type of user interaction it allows.
+The specific callbacks for the widgets will be illustrated later.
 
-此类事件是便捷的方式去定义应用程序的行为。
-
-每个组件都有它独有的回调函数，取决于用户交互的方式。
-
-某些组件的特别回调函数将会在后面说明.
-
-为了创建一个功能类似于事件监听，你必须调用一个函数，像eventname.do (i.e. onclick.do)传递参数来管理事件.
-以下是一个例子:
+In order to register a function as an event listener you have to call a function like eventname.do (i.e. onclick.do) passing as parameters the callback that will manage the event.
+Follows an example:
 
 ```py
 import remi.gui as gui
@@ -201,33 +198,32 @@ class MyApp(App):
         self.lbl = gui.Label('Hello world!')
         self.bt = gui.Button('Press me!')
 
-        # 为鼠标点击按钮创建一个监听事件
+        # setting the listener for the onclick event of the button
         self.bt.onclick.do(self.on_button_pressed)
 
-        # 添加一个部件, 第一个参数是必须的
+        # appending a widget to another, the first argument is a string key
         container.append(self.lbl)
         container.append(self.bt)
 
-        # 回到根部件
+        # returning the root widget
         return container
 
-    # 监听事件的回调函数
+    # listener function
     def on_button_pressed(self, widget):
         self.lbl.set_text('Button pressed!')
         self.bt.set_text('Hi!')
 
-#开启网络服务器
+# starts the web server
 start(MyApp)
 ```
 
-在这个展示的例子里 *self.bt.onclick.do(self.on_button_pressed)* 注册了 self's *on_button_pressed* 函数作为一个监视事件对于*鼠标点击按钮* 这个事件.
-简单, 容易.
+In the shown example *self.bt.onclick.do(self.on_button_pressed)* registers the self's *on_button_pressed* function as a listener for the event *onclick* exposed by the Button widget.
+Simple, easy.
 
-监听事件的回调函数 将会收到操作, 然后所有其他参数会由特殊事件提供.
+Listener's callbacks will receive the emitter's instance firstly, then all other parameters provided by the specific event.
 
-除了标准的事件注册(就像之前提到的),传递普通参数到监听事件的回调函数同样是允许的 .
 
-正如下面的例子:
+Besides the standard event registration (as aforementioned), it is possible to pass user parameters to listener functions. This can be achieves appending parameters to the *do* function call.
 
 ```py
 import remi.gui as gui
@@ -243,28 +239,28 @@ class MyApp(App):
         self.bt = gui.Button('Hello name!')
         self.bt2 = gui.Button('Hello name surname!')
 
-        #建立两个鼠标点击按钮的监听事件
-        self.bt.onclick.do(self.on_button_pressed, "Name")#传入普通参数"Name"
+        # setting the listener for the onclick event of the buttons
+        self.bt.onclick.do(self.on_button_pressed, "Name")
         self.bt2.onclick.do(self.on_button_pressed, "Name", "Surname")
 
-        # 将组件加入
+        # appending a widget to another
         container.append(self.lbl)
         container.append(self.bt)
         container.append(self.bt2)
 
-        # 返回根组件
+        # returning the root widget
         return container
 
-    # 监听事件
-    def on_button_pressed(self, widget, name='', surname=''):#name和surname就是传入的普通参数
+    # listener function
+    def on_button_pressed(self, widget, name='', surname=''):
         self.lbl.set_text('Button pressed!')
         widget.set_text('Hello ' + name + ' ' + surname)
 
-# 开启网络服务器
+# starts the web server
 start(MyApp)
 ```
 
-这有极大的灵活性, 允许使用相同的事件监听器定义获取不同的行为.
+This allows great flexibility, getting different behaviors with the same event listener definition.
 
 
 HTML Attribute accessibility
