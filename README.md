@@ -384,7 +384,7 @@ Remi应作为标准桌面GUI框架
 
 [rElectrum](https://github.com/emanuelelaface/rElectrum): A powerful promising Electrum wallet manager for safe transactions.
 
-Other Implementations
+其他地址
 ===
-Listed here are other implementations of this library:
+下面是Remi的其他地址：
 - [**cremi**](https://github.com/cyberpro4/cremi): (WIP) developed for your C++ projects by [Claudio Cannatà](https://github.com/cyberpro4).
