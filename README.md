@@ -318,10 +318,10 @@ start(MyApp, address='0.0.0.0', port=8081)
 **注意PyWebView使用qt, gtk等等来创建窗口。 这些库的版本过时可能会导致 UI 问题。 如果你遇到UI问题，更新这些库，或者更好地避免独立执行。**
 
 
-Authentication
+验证
 ===
-In order to limit remote access to your interface, you can define a username and password. It consists of a simple authentication process.
-Just define the parameters **username** and **password** in the start call:
+为了限制远程接入你的接口，你可以自定义一个用户名和密码。 它由一个简单的身份验证过程组成。
+只需要在“start”指令中定义**username** and **password** :
 ```py
 start(MyApp, username='myusername', password='mypassword')
 ```
