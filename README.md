@@ -356,7 +356,7 @@ Remi应作为标准桌面GUI框架
 ===
 感谢您与我们合作，让Remi变得更好！
 
-开源的真正力量来源于贡献者。 请自由地参与这个项目， 并且考虑将你自己加入 [contributors list](doc/contributors.md).
+开源的真正力量来源于贡献者。 请自由地参与这个项目， 并且考虑将你自己加入 [贡献者名单](doc/contributors.md).
 我知道GitHub已经为我们提供了贡献者名单， 但我觉得我必须提到这些提供帮助的贡献者。
 
 <a href="https://github.com/dddomodossola/remi/graphs/contributors">
