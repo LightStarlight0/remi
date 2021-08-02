@@ -297,7 +297,7 @@ Take care about internally used attributes. These are:
 - **id**: It is used to store the instance id of the widget for callback management
 
 
-远程接入
+远程连接
 ===
 如果你正在远程使用Remi并且开启了DNS和防火墙， 你可以在 `start` 指令中设定特殊参数:
 - **port**: HTTP 服务器端口。不要忘记把这个端口转换到你的路由器；
