@@ -297,10 +297,10 @@ Take care about internally used attributes. These are:
 - **id**: It is used to store the instance id of the widget for callback management
 
 
-Remote access
+远程接入
 ===
-If you are using your REMI app remotely, with a DNS and behind a firewall, you can specify special parameters in the `start` call:
-- **port**: HTTP server port. Don't forget to NAT this port on your router;
+如果你正在远程使用Remi并且开启了DNS和防火墙， 你可以在 `start` 指令中设定特殊参数:
+- **port**: HTTP 服务器端口。不要忘记把这个端口转换到你的路由器；
 
 ```py
 start(MyApp, address='0.0.0.0', port=8081)
