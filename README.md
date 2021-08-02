@@ -366,9 +366,9 @@ Remi应作为标准桌面GUI框架
 
 使用Remi的项目
 ===
-[PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI): Launched in 2018 Actively developed and supported. Supports tkinter, Qt, WxPython, Remi (in browser). Create custom layout GUI's simply. Python 2.7 & 3 Support. 100+ Demo programs & Cookbook for rapid start. Extensive documentation.
+[PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI): 发行于2018年， 经过积极地开发和支持。 支持TKinter，Qt，WxPython，Remi（在浏览器中）， 简单地创建自定义布局GUI， python2.7&3支持，100+ 演示程序 & 快速起步指南，拥有大量的文档。
 
-[App Template For REMI](https://github.com/cheak1974/remi-app-template): A really well written template for multiview applications.
+[App Template For REMI](https://github.com/cheak1974/remi-app-template): 一个极好的多视图应用程序书写模板。
 
 [Web based dynamic reconfigure for ROS robots](https://github.com/awesomebytes/web_dyn_reconf)
 
@@ -382,7 +382,8 @@ Remi应作为标准桌面GUI框架
 
 [LightShowPi show manager](https://github.com/Chrispizzi75/ShowManager)
 
-[rElectrum](https://github.com/emanuelelaface/rElectrum): A powerful promising Electrum wallet manager for safe transactions.
+[rElectrum](https://github.com/emanuelelaface/rElectrum): 为安全交易提供一个大有潜力的电子货币钱包管理者
+
 
 其他地址
 ===
