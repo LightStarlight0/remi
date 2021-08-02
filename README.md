@@ -343,27 +343,28 @@ Compatibility
 Remi is made to be compatible from Python2.7 to Python3.X. Please notify compatibility issues.
 
 
-Security
+安全
 ===
-Remi should be intended as a standard desktop GUI framework.
-The library itself doesn't implement security strategies, and so it is advised to not expose its access to unsafe public networks.
+Remi应作为标准桌面GUI框架
+图书馆自身不带有安全策略，因此建议不要将其数据库公开与不安全的公用网络中。
 
-When loading data from external sources, consider protecting the application from potential javascript injection before displaying the content directly.
+从外部加载数据时，留意在直接显示内容之前保护应用程序免受潜在的javascript注入。
 
 
-Contributors
+
+贡献者
 ===
-Thank you for collaborating with us to make Remi better!
+感谢您与我们合作，让Remi变得更好！
 
-The real power of opensource is contributors. Please feel free to participate in this project, and consider to add yourself to the [contributors list](doc/contributors.md).
-Yes, I know that GitHub already provides a list of contributors, but I feel that I must mention who helps.
+开源的真正力量来源于贡献者。 请自由地参与这个项目， 并且考虑将你自己加入 [contributors list](doc/contributors.md).
+我知道GitHub已经为我们提供了贡献者名单， 但我觉得我应该提到这些提供帮助的贡献者。
 
 <a href="https://github.com/dddomodossola/remi/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=dddomodossola/remi" >
 </a>
 
 
-Projects using Remi
+使用Remi的项目
 ===
 [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI): Launched in 2018 Actively developed and supported. Supports tkinter, Qt, WxPython, Remi (in browser). Create custom layout GUI's simply. Python 2.7 & 3 Support. 100+ Demo programs & Cookbook for rapid start. Extensive documentation.
 
