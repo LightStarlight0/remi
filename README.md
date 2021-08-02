@@ -307,15 +307,15 @@ start(MyApp, address='0.0.0.0', port=8081)
 ```
 
 
-Standalone Execution
+独立执行
 ===
-I suggest using the browser as a standard interface window.
+我建议使用浏览器作为标准界面窗口。
 
-However, you can avoid using the browser.
-This can be simply obtained joining REMI and [PyWebView](https://github.com/r0x0r/pywebview).
-Here is an example about this [standalone_app.py](https://github.com/dddomodossola/remi/blob/development/examples/standalone_app.py).
+然而，你也可以不适用浏览器。
+这可以通过加入REMI和 [PyWebView](https://github.com/r0x0r/pywebview)轻松实现。
+这是一个关于[standalone_app.py](https://github.com/dddomodossola/remi/blob/development/examples/standalone_app.py)的例子。
 
-**Be aware that PyWebView uses qt, gtk and so on to create the window. An outdated version of these libraries can cause UI problems. If you experience UI issues, update these libraries, or better avoid standalone execution.**
+**注意PyWebView使用qt, gtk等等来创建窗口。 这些库的版本过时可能会导致 UI 问题。 如果你遇到UI问题，更新这些库，或者更好地避免独立执行。**
 
 
 Authentication
