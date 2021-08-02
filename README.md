@@ -346,7 +346,7 @@ Remi is made to be compatible from Python2.7 to Python3.X. Please notify compati
 安全
 ===
 Remi应作为标准桌面GUI框架
-图书馆自身不带有安全策略，因此建议不要将其数据库公开于不安全的公用网络中。
+库自身不带有安全策略，因此建议不要将其数据库公开于不安全的公用网络中。
 
 从外部加载数据时，留意在直接显示内容之前保护应用程序免受潜在的javascript注入。
 
