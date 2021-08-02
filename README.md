@@ -95,25 +95,25 @@ start(MyApp)
 ```
 
 为了能够看到效果并交互, 打开你最新的浏览器并打开"http://127.0.0.1:8081".
-You can change the URL address by specific **kwargs at `start` function call. This will be discussed later.
+你可以改变URL地址参数来开始函数调用. 这在下面将会被提及.
 
-Tested on Android, Linux, Windows.
-Useful on Raspberry Pi for Python script development. It allows interacting with your Raspberry Pi remotely from your mobile device.
+在Android, Linux, Windows上测试过.
+在Raspberry Pi 同样可以运行. 他允许你和你的Raspberry Pi在移动设备上远程交互.
 
 
 FAQ
 ===
-- **Why another GUI lib?**
-Kivy, PyQT, and PyGObject all require native code for the host operating system, which means installing or compiling large dependencies. Remi needs only a web browser to show your GUI.
+- **为什么我们需要这样的GUI库?**
+Kivy, PyQT, and PyGObject在主机上都需要额外的代码,那意味着安装或编译大量的依赖. Remi只需要一个浏览器来展现你的GUI.
 
-- **Do I need to know HTML?**
-NO, It is not required, you have to code only in Python.
+- **我需要精通HTML吗?**
+不,这不需要, 你只需要在python中撰写代码.
 
-- **Is it open source?**
-For sure! Remi is released under the Apache License. See the ``LICENSE`` file for more details.
+- **它开源吗?**
+当然! Remi基于Apache License. 更多细节请看``LICENSE`` 文件.
 
-- **Do I need some kind of web server?**
-No, it's included.
+- **我需要某种网络服务器吗?**
+不, 它已经包含在其中了.
 
 
 Brief tutorial
