@@ -26,25 +26,25 @@ There is also a **drag n drop GUI Editor**. Look at the [Editor](https://github.
 <p align="center">
 
 
-Getting Started
+开始
 ===
-For a **stable** version:
+获取一个稳定的版本:
 ```
 pip install remi
 ```
 
-For the most updated **experimental** version [Download](https://github.com/dddomodossola/remi/archive/master.zip) or check out Remi from git and install
+获取一个有更多更新的实验版本 [下载](https://github.com/dddomodossola/remi/archive/master.zip) 或者直接从项目git
 
 ```
 python setup.py install
 ```
-or install directly using pip
+或者直接使用pip安装
 
 ```
 pip install git+https://github.com/dddomodossola/remi.git
 ```
 
-Then start the test script (download it from github https://github.com/dddomodossola/remi/blob/master/examples/widgets_overview_app.py):
+然后测试实验脚本 (从github下载 https://github.com/dddomodossola/remi/blob/master/examples/widgets_overview_app.py):
 ```
 python widgets_overview_app.py
 ```
@@ -52,7 +52,7 @@ python widgets_overview_app.py
 
 Remi
 ===
-Platform independent Python GUI library. In less than 100 Kbytes of source code, perfect for your diet.
+Remi是一个. In less than 100 Kbytes of source code, perfect for your diet.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/dddomodossola/remi/development/remi/res/screenshot.png" title="Widgets overview">
