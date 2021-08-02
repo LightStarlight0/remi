@@ -311,7 +311,7 @@ start(MyApp, address='0.0.0.0', port=8081)
 ===
 我建议使用浏览器作为标准界面窗口。
 
-然而，你也可以不适用浏览器。
+然而，你也可以不使用浏览器。
 这可以通过加入REMI和 [PyWebView](https://github.com/r0x0r/pywebview)轻松实现。
 这是一个关于[standalone_app.py](https://github.com/dddomodossola/remi/blob/development/examples/standalone_app.py)的例子。
 
@@ -321,16 +321,16 @@ start(MyApp, address='0.0.0.0', port=8081)
 验证
 ===
 为了限制远程接入你的接口，你可以自定义一个用户名和密码。 它由一个简单的身份验证过程组成。
-只需要在“start”指令中定义**username** and **password** :
+只需要在“start”指令中定义**username** 和 **password** :
 ```py
 start(MyApp, username='myusername', password='mypassword')
 ```
 
 
-Styling
+样式
 ===
-In order to define a new style for your app, you have to do the following.
-Create a *res* folder and pass it to your App class constructor:
+为了在你的应用中定义新样式，你需要执行以下操作：
+创建一个 *res* 文件夹并将其传递给您的 App 类构造函数：
 ```python
 class MyApp(App):
     def __init__(self, *args):
@@ -338,13 +338,12 @@ class MyApp(App):
         super(MyApp, self).__init__(*args, static_file_path={'res':res_path})
 ```
 
-Copy the standard style.css file from the remi folder and paste it inside your *res* folder. Edit it in order to customize.
-This way the standard *style.css* file gets overridden by the one you created.
+从remi文件夹复制css文件标准样式然后粘贴到你的*res*文件夹，通过编辑它来自定义样式。
+这样，标准的 *style.css* 文件就会被您创建的文件覆盖。
 
-
-Compatibility
+兼容性
 ===
-Remi is made to be compatible from Python2.7 to Python3.X. Please notify compatibility issues.
+Remi 兼容 Python2.7 到 Python3.X。 请注意兼容性问题。
 
 
 安全
