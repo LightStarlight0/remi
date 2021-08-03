@@ -12,9 +12,8 @@
    limitations under the License.
 """
 
-""" This example shows the possibility to stop the server by App.close() method.
-    With multiple_clients, the server will stop as soon as all the clients 
-    will disconnect.
+""" 这个例子展现了运用App.close()关闭服务器
+    如果有多个连接的客户端, 服务器会关闭所有连接.
 """
 
 import remi.gui as gui
@@ -23,7 +22,7 @@ from remi import start, App
 
 class MyApp(App):
     def main(self, name='world'):
-        # margin 0px auto allows to center the app to the screen
+        # margin 0px auto 允许让app显示在屏幕中央
         wid = gui.VBox(width=300, height=200, margin='0px auto')
 
         bt = gui.Button('Close App', width=200, height=30)
@@ -35,16 +34,14 @@ class MyApp(App):
         wid.append(bt)
         return wid
 
-    # listener function
+    #监听事件
     def on_button_pressed(self, _):
-        self.close()  # closes the application
+        self.close()  # 关闭服务器
 
     def on_close(self):
-        """ Overloading App.on_close event allows to perform some 
-             activities before app termination.
-        """
+        #加载App.on_close允许在关闭前进行一些操作
         print("I'm going to be closed.")
-        super(MyApp, self).on_close()
+        super(MyApp, self).on_close()#关闭
 
 
 if __name__ == "__main__":

@@ -12,10 +12,10 @@
    limitations under the License.
 """
 
-""" This example shows the use of the following Widget methods:
-    Widget.append(widget, key) : to add child widgets in a container widget
-    Widget.remove_child(widget) : to remove a widget instance from a container widget
-    Widget.empty() : to remove all childrens from a container widget
+""" 这个例子展现了一下几种部件的使用方法:
+    Widget.append(widget, key) : 添加部件到一个容器
+    Widget.remove_child(widget) : 从某个容器中移除某个部件
+    Widget.empty() : 移除容器中的所有部件
 """
 
 import remi.gui as gui
@@ -27,26 +27,31 @@ class MyApp(App):
     def main(self):
         main_container = gui.VBox()
         lbl = gui.Label("Press the buttons to add or remove labels")
+        #创建按钮
         bt_add = gui.Button("add a label", style={'margin': '3px'})
+        #按钮事件
         bt_add.onclick.do(self.on_add_a_label_pressed)
+        
         bt_remove = gui.Button("remove a label", style={'margin': '3px', 'background-color': 'orange'})
         bt_remove.onclick.do(self.on_remove_a_label_pressed)
+        
         bt_empty = gui.Button("empty", style={'margin': '3px', 'background-color': 'red'})
         bt_empty.onclick.do(self.on_empty_pressed)
+        
         self.lbls_container = gui.HBox()
         main_container.append([lbl, bt_add, bt_remove, bt_empty, self.lbls_container])
 
-        # returning the root widget
+        # 返回根部件
         return main_container
 
     def on_add_a_label_pressed(self, emitter):
-        # I create a unique id for the new label that will be instantiated
+        # 创建一个标签，并让其拥有一个特殊id
         key = str(len(self.lbls_container.children))
         lbl = gui.Label("label id: " + key, style={'border': '1px solid gray', 'margin': '3px'})
         self.lbls_container.append(lbl, key)
 
     def on_remove_a_label_pressed(self, emitter):
-        # if there are no childrens, return
+        # 如果没有这个部件，那就退出函数
         if len(self.lbls_container.children) < 1:
             return
         key = str(len(self.lbls_container.children) - 1)

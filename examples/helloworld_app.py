@@ -12,8 +12,7 @@
    limitations under the License.
 """
 
-""" Here is an "Hello World" application showing a simple interaction
-     with the user.
+""" HelloWorld例程
 """
 
 import remi.gui as gui
@@ -25,32 +24,30 @@ class MyApp(App):
         super(MyApp, self).__init__(*args)
 
     def main(self):
-        #creating a container VBox type, vertical
+        #添加一个宽为300高为200的网页窗口
         wid = gui.VBox(width=300, height=200)
 
-        #creating a text label, "white-space":"pre" preserves newline
+        #创建一个文本框,style是{"white-space":"pre"}，高为50%，宽为80%
         self.lbl = gui.Label('Hello\n test', width='80%', height='50%', style={"white-space":"pre"})
 
-        #a button for simple interaction
+        #一个简单交互的按钮
         bt = gui.Button('Press me!', width=200, height=30)
 
-        #setting up the listener for the click event
+        #建立这个按钮的点击事件
         bt.onclick.do(self.on_button_pressed)
         
-        #adding the widgets to the main container
+        #添加按钮到容器
         wid.append(self.lbl)
         wid.append(bt)
 
-        # returning the root widget
+        # 返回根部件
         return wid
 
-    # listener function
+    # 按钮的点击事件
     def on_button_pressed(self, emitter):
         self.lbl.set_text('Hello World!')
         
 
 if __name__ == "__main__":
-    # starts the webserver
-    # optional parameters
-    # start(MyApp,address='127.0.0.1', port=8081, multiple_instance=False,enable_file_cache=True, update_interval=0.1, start_browser=True)
+    # 开启服务器，在IP0.0.0.0,端口为随机
     start(MyApp, debug=True, address='0.0.0.0', port=0)
