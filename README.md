@@ -267,34 +267,33 @@ start(MyApp)
 这有极大的灵活性, 允许使用相同的事件监听器定义获取不同的行为.
 
 
-HTML Attribute accessibility
+HTML属性可访问性
 ===
-Sometimes it is required to access Widget's HTML representation in order to manipulate HTML attributes.
-The library allows accessing this information easily.
+有时为了操作HTML，需要访问组件的HTML属性。这个库可以轻易地操作这些信息。
 
-A simple example: It is the case where you would like to add a hover text to a widget. This can be achieved by the *title* attribute of an HTML tag.
-In order to do this:
+一个简单的例子: 您希望将将文本添加到部件, 这可以通过HTML标签的*title*属性实现。
+为了做到这样:
 
 ```py
     widget_instance.attributes['title'] = 'Your title content'
 ```
 
-A special case of HTML attribute is the *style*.
-The style attributes can be altered in this way:
+一个特殊的HTML属性的例子是style.
+style可以这样被添加选择:
 
 ```py
     widget_instance.style['color'] = 'red'
 ```
 
-The assignment of a new attribute automatically creates it.
+新属性的赋值会自动创建它。
 
-For a reference list of HTML attributes, you can refer to https://www.w3schools.com/tags/ref_attributes.asp
+获得一个HTML属性的列表, 参考 https://www.w3schools.com/tags/ref_attributes.asp
 
-For a reference list of style attributes, you can refer to https://www.w3schools.com/cssref/default.asp
+获得一个style属性的列表, 参考https://www.w3schools.com/cssref/default.asp
 
-Take care about internally used attributes. These are:
-- **class**: It is used to store the Widget class name for styling purpose
-- **id**: It is used to store the instance id of the widget for callback management
+注意那些内部的属性. 他们是:
+- **class**: 这被用来存储组件类名称
+- **id**: 这被用来存储用于回调管理的小部件的实例id
 
 
 远程连接
