@@ -12,16 +12,14 @@
    limitations under the License.
 """
 
-""" Here is shown the usage of GridBox layout.
-    The gridbox layouting allows a flexible way to define a layout matrix
-     using GridBox.define_grid, passing as parameter a two dimensional iterable.
-    Each element in the defined grid, is the "key" to address a widget by the 
-    GridBox.append method.
-    In this example, the matrix is a list of strings, where each character is used
-     as a "key". A key can occur multiple times in the defined matrix, making the 
-     widget to cover a bigger area.
-    The size of each column and row in the grid can be defined by GridBox.style,
-     and the style parameters are 
+"""这个展示了GridBox方式的布局.
+    grid布局允许以一种灵活的方式定义布局
+    使用GridBox.define_grid，传递一个二维可迭代对象作为参数。
+    被定义在grid中的每个元素, 是一个关键部分对于GridBox.append函数
+    在这个例子中, 模型是一些字符串, 每个字符都被用来当作key.
+    一个key可以在定义的模型中出现多次, 使组件覆盖更大的空间.
+    每个在布局中的纵列和横行的大小都可以通过GridBox.style被定义,
+     style参数是类似这样的 
      {'grid-template-columns':'10% 90%', 'grid-template-rows':'10% 90%'}.
 """
 
@@ -32,7 +30,7 @@ import os
 
 class MyApp(App):
     def main(self):
-        #creating a container GridBox type
+        #创建一个grid格式的容器
         main_container = gui.GridBox(width='100%', height='100%', style={'margin':'0px auto'})
         
         label = gui.Label('This is a label')

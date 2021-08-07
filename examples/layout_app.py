@@ -26,6 +26,7 @@ class untitled(App):
     def main(self):
         mainContainer = Container(width=706, height=445, margin='0px auto', style="position: relative")
         subContainer = HBox(width=630, height=277, style='position: absolute; left: 40px; top: 150px; background-color: #b6b6b6')
+        
         vbox = VBox(width=300, height=250)
         bt1 = Button('bt1', width=100, height=30)
         vbox.append(bt1,'bt1')
@@ -34,6 +35,7 @@ class untitled(App):
         bt2 = Button('bt2', width=100, height=30)
         vbox.append(bt2,'bt2')
         subContainer.append(vbox,'vbox')
+        
         hbox = HBox(width=300, height=250)
         lbl1 = Label('lbl1', width=50, height=50, style='background-color: #ffb509')
         hbox.append(lbl1,'lbl1')
@@ -42,8 +44,9 @@ class untitled(App):
         lbl3 = Label('lbl3', width=50, height=50, style='background-color: #e706ff')
         hbox.append(lbl3,'lbl3')
         subContainer.append(hbox,'hbox')
+        
         mainContainer.append(subContainer,'subContainer')
-        #将按钮和文本标签加入窗口
+
         comboJustifyContent = gui.DropDown.new_from_list(('flex-start','flex-end','center','space-between','space-around'),
                                     style='left: 160px; position: absolute; top: 60px; width: 148px; height: 30px')
         mainContainer.append(comboJustifyContent,'comboJustifyContent')
