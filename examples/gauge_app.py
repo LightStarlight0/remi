@@ -155,11 +155,11 @@ class Gauge(gui.Svg):
         self.set_value_preview(value)
 
 
-class MyApp(App):
+class MyApp(App):#窗口
     def main(self, name='world'):
-        self.wid = gui.VBox(margin='0px auto') #margin 0px auto to center the screen
+        self.wid = gui.VBox(margin='0px auto') #布局在中央
         
-        self.gauge = InputGauge(200, 200, 1000, 10000)
+        self.gauge = InputGauge(200, 200, 1000, 10000)#画图
         self.wid.append(self.gauge)
 
         # returning the root widget

@@ -12,9 +12,9 @@
    limitations under the License.
 """
 
-""" This example permits to play with VBox and HBox layouts.
-    Different style parameters plays a specific role in layout arrangement,
-     and this little application allows to test each parameter behavior.
+""" VBox和HBox的布局设计.
+    不同的样式参数在布局安排中起着特别的作用,
+     这个例程可以展示不同的参数的样式.
 """
 
 import remi.gui as gui
@@ -43,20 +43,25 @@ class untitled(App):
         hbox.append(lbl3,'lbl3')
         subContainer.append(hbox,'hbox')
         mainContainer.append(subContainer,'subContainer')
+        #将按钮和文本标签加入窗口
         comboJustifyContent = gui.DropDown.new_from_list(('flex-start','flex-end','center','space-between','space-around'),
                                     style='left: 160px; position: absolute; top: 60px; width: 148px; height: 30px')
         mainContainer.append(comboJustifyContent,'comboJustifyContent')
+        
         lblJustifyContent = Label('justify-content', style='left: 40px; position: absolute; top: 60px; width: 100px; height: 30px')
         mainContainer.append(lblJustifyContent,'lblJustifyContent')
+        
         comboAlignItems = gui.DropDown.new_from_list(('stretch','center','flex-start','flex-end','baseline'),
                                     style='left:160px; position:absolute; top:100px; width:152px; height: 30px')
         mainContainer.append(comboAlignItems,'comboAlignItems')
+        
         lblAlignItems = Label('align-items', style='left:40px; position:absolute; top:100px; width:100px; height:30px')
         mainContainer.append(lblAlignItems,'lblAlignItems')
+        
         mainContainer.children['comboJustifyContent'].onchange.do(self.onchange_comboJustifyContent,vbox,hbox)
         mainContainer.children['comboAlignItems'].onchange.do(self.onchange_comboAlignItems,vbox,hbox)
 
-        lblTitle = gui.Label("The following example shows the two main layout style properties for the VBox and HBox containers. Change the value of the two combo boxes.",
+        lblTitle = gui.Label("下来的例子展示了两种Vbox和Hbox主要的布局格式特性.",
                                     style='position:absolute; left:0px; top:0px')
         mainContainer.append(lblTitle)
 
@@ -73,7 +78,7 @@ class untitled(App):
 
 
 
-#Configuration
+#配置文件
 configuration = {'config_enable_file_cache': True, 'config_multiple_instance': True, 'config_port': 0, 'config_address': '0.0.0.0', 'config_start_browser': True, 'config_project_name': 'untitled', 'config_resourcepath': './res/'}
 
 if __name__ == "__main__":
