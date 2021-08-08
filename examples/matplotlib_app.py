@@ -12,10 +12,11 @@
    limitations under the License.
 """
 
-""" 这个简单的例子展示了如何显示一张矩阵图。
-     矩阵图通过url需求这一指定的特殊方法得以解决。展示的图像的url指向"get_image_data"，传递一个附加参数"update_index"。
-     我们提示浏览器图像更改因此强制图像更新
-    
+""" This simple example shows how to display a matplotlib plot image.
+    The MatplotImage gets addressed by url requests that points to 
+     a specific method. The displayed image url points to "get_image_data" 
+    Passing an additional parameter "update_index" we inform the browser 
+     about an image change so forcing the image update.
 """
 
 import io
