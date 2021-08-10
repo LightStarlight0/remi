@@ -8,7 +8,7 @@
 
 [![加入聊天 https://gitter.im/dddomodossola/remi](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dddomodossola/remi?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-RemI是一个易于使用的python图形界面库。它在浏览器中显示并且可以远程访问。这会删除特定平台的依赖性并让您轻松地在 Python 中开发跨平台应用程序！
+RemI是一个易于使用的python图形界面库。它在浏览器中显示并且可以远程访问，您能轻松地在 Python 中开发跨平台应用程序！
 [更多信息 https://github.com/dddomodossola/remi](https://github.com/dddomodossola/remi)
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/preview.png "Editor window")
