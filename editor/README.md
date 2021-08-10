@@ -14,7 +14,7 @@ RemI是一个易于使用的python图形界面库。它在浏览器中显示并�
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/preview.png "Editor window")
 
 **editor_app** 允许您在易于使用的环境中以图形方式设计 gui 界面。
-你可以在屏幕左侧的小部件集合添加你需要添加到界面中的小组件。
+你可以在屏幕左侧的小组件集合添加你需要添加到界面中的小组件。
 选择小部件，您必须填写分配小组件所需的一些字段。 除了构造函数参数之外，还需要一些附加信息：
 - **变量名**：用于生成应用程序代码的标识符；
 - **重载基类** 标示： 定义了变量是否必须是一个新类的实例，该类将重载基类。
