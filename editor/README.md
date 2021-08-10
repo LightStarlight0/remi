@@ -8,7 +8,7 @@
 
 [![加入聊天 https://gitter.im/dddomodossola/remi](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dddomodossola/remi?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-RemI是一个易于使用的python图形界面库。它在浏览器中显示并且可以远程访问，您能轻松地在 Python 中开发跨平台应用程序！
+RemI是一个易于使用的python图形界面库。它在浏览器中显示并且可以远程访问。这会删除特定平台的依赖性并让您轻松地在 Python 中开发跨平台应用程序！
 [更多信息 https://github.com/dddomodossola/remi](https://github.com/dddomodossola/remi)
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/preview.png "Editor window")
@@ -34,65 +34,56 @@ HBox和VBox容器 **不支持**手动拖动和调整小组件的大小。但小�
 你的应用程序**可以重新载入编辑**。
 
 
-A step by step example
+让我们来逐步举例！😊
 ===
-Now, let's create our first *Hello World* application.
+现在，让我们来写第一个*Hello world*应用
 
-First of all we have to select from the left side toolbox the Widget component. It will be our main window.
-In the shown dialog we have to write a name for the variable. We will call it *mainContainer*.
+首先我们必须从左侧toolbox中选择Widget部件。这会成为我们的主窗口。在显示的对话框中我们要为变量去一个名称。我们可以叫它mainContainer。
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/new_container.png "New Widget container")
 
 
-Then, once the widget is added to the editor, you can drag and resize it.
+接下来，只要将小部件(widget)加入到到eidtor中，我们就可以拖动并调整其大小。
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/drag_resize_container.png "Drag and resize container")
 
-
-Now, from the left side toolbox we select a Label widget that will contain our *Hello World* message.
-Again, we have to type the variable name for this widget.
+现在，从左边toolbox中选择一个Lable widget用来存储我们的*Hello world*信息。让我们再次为这个部件取名字。
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/new_label.png "Add new label")
 
 
-Then, we can select the label by clicking on it in order to drag and resize.
+现在，我们可以点击选中这个标签(lable)来拖动和调整它的大小
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/drag_resize_label.png "Drag and resize label")
 
-
-We need for sure a Button. Since we have to add it to the mainContainer, we have to select the container by clicking on it.
-After that, click on the Button widget in the left side toolbox. 
-Type the variable name and confirm.
+我们显然会需要用到一个Button。让我们点击选择一种container来将按钮(button)添加到mainContainer中。之后，在左侧toolbox中选择the Button widget。确认并输入变量名称。
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/new_button.png "Add new button")
 
 
-Select the Button widget by clicking on it and drag and resize.
+点击按钮部件来拖动并更改大小
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/drag_resize_button.png "Drag and resize button")
 
-
-Now, all the required widgets are added. We have to connect the *onclick* event from the button to a listener, in our case the listener will be the main App.
+恭喜你！所有需要的部件已经添加好了。😉 <br>现在，我们必须将*onclick*事件从按钮连接到一个监听器(listener)上。在我们的例子中，监听器将是主应用程序。
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/connect_button.png "Connect button onclick event to App")
 
 
-All it's done, save the project by the upper menu bar.
+全部完成之后，通过上面的菜单保存项目。
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/save_menu.png "Save menu")
 
 
-Select the destination folder. Type the app filename and confirm.
+选择目标文件夹，输入这个app的名称并确认。
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/save_dialog.png "Save dialog")
 
-
-We can now edit the code to say the *Hello World* message.
+我们现在可以编辑代码*Hello World*的啦 
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/edit_hello_message.png "Edit the code to say Hello World")
 
-
-Run the application and... Say Hello!
+运行这个程序……<br>你好，世界！！
 
 ![Alt text](https://raw.githubusercontent.com/dddomodossola/remi/master/editor/res/tutorial_images/hello.png "Run the App")
 
