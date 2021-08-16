@@ -11,11 +11,13 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
-
+"""
+这个例子展示了两个允许用户缩放、拖动的组件
+"""
 import remi.gui as gui
 import remi.server
 from remi import start, App
-import os #for path handling
+import os #为了路径处理
 
 
 
