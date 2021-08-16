@@ -11,7 +11,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
-
+"""
+这个例子展示了通过引用PIL的库实现对于图片的展示，支持打开保存图片
+"""
 import time
 import io
 import traceback
@@ -22,8 +24,8 @@ from remi import start, App
 import remi
 
 
-class PILImageViewverWidget(gui.Image):
-    def __init__(self, filename=None, **kwargs):
+class PILImageViewverWidget(gui.Image):                                         #定义一个查看图片的组件
+    def __init__(self, filename=None, **kwargs):                                #初始化组件
         self.app_instance = None
         super(PILImageViewverWidget, self).__init__("/res:logo.png", **kwargs)
         self.frame_index = 0
@@ -31,7 +33,7 @@ class PILImageViewverWidget(gui.Image):
         if filename:
             self.load(filename)
 
-    def load(self, file_path_name):
+    def load(self, file_path_name):                                             #加载图片的函数,传入file_path_name即图片地址
         pil_image = PIL.Image.open(file_path_name)
         self._buf = io.BytesIO()
         pil_image.save(self._buf, format='png')
@@ -45,7 +47,7 @@ class PILImageViewverWidget(gui.Image):
             return None
         return self.search_app_instance(node.get_parent()) 
 
-    def refresh(self, *args):
+    def refresh(self, *args):                                                   #刷新页面
         if self.app_instance==None:
             self.app_instance = self.search_app_instance(self)
             if self.app_instance==None:
