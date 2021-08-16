@@ -20,7 +20,7 @@ class MyApp(App):
         super(MyApp, self).__init__(*args, static_file_path={'my_res_folder':res_path})
 
     def main(self):
-        #您可以从资源文件声明中加载图像，如/key:filename
+        #您可以从资源文件声明中加载图像，如  remi convention /key:filename
         #您必须使用参数 *static_file_path* 字典在 App.__init__ 函数中声明资源文件夹
         resource_image = gui.Image("/my_res_folder:mine.png", width="30", height="30")
 
