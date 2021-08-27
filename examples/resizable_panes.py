@@ -43,8 +43,8 @@ class ResizeHelper(gui.Widget, gui.EventSource):
         self.origin_y = -1
         
     def setup(self, refWidget, newParent):
-        #refWidget is the target widget that will be resized
-        #newParent is the container
+        #refWidget是即将被改变大小的组件
+        #newParent是容器
         if self.parent:
             try:
                 self.parent.remove_child(self)
