@@ -1376,14 +1376,7 @@ class HEAD(Tag):
                 // characters than they actually were
                 Remi.prototype._byteLength = function(str) {
                     // returns the byte length of an utf8 string
-                    var s = str.length;
-                    for (var i=str.length-1; i>=0; i--) {
-                        var code = str.charCodeAt(i);
-                        if (code > 0x7f && code <= 0x7ff) s++;
-                        else if (code > 0x7ff && code <= 0xffff) s+=2;
-                        if (code >= 0xDC00 && code <= 0xDFFF) i--; //trail surrogate
-                    }
-                    return s;
+                    return str.length;
                 };
 
                 Remi.prototype._paramPacketize = function (ps){
@@ -3993,9 +3986,17 @@ class MenuItem(Container, _MixinTextualWidget):
         self.type = 'li'
         self.set_text(text)
 
+        self.attributes['tabindex'] = '0'
+
     def append(self, value, key=''):
 
         return self.sub_container.append(value, key=key)
+
+    @decorate_set_on_listener("(self, emitter)")
+    @decorate_event_js("remi.sendCallback('%(emitter_identifier)s','%(event_name)s');document.activeElement.blur();")
+    def onclick(self):
+        """Called when the Widget gets clicked by the user with the left mouse button."""
+        return ()
 
 
 class TreeView(Container):
