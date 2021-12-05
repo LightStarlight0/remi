@@ -2,19 +2,18 @@ Changelog
 ===
 *2019 December 26*
 
-Since now remi is adopting class properties to setup css style and html attributes to make the applicable properties explicit.
-This means that for example, to change a widget background you can now do:
+从现在起，remi采用类属性来设置css样式和html属性，使适用的属性显式。
+举个栗子, 现在更改 widget background 你可以这样做:
 
 ```python
     mywidget.css_background_color = 'green'
 ```
 
-The old method to setup style and attributes is still accepted:
+当然老的方法也是兼容的 
 
 ```python
     mywidget.style['background-color'] = 'green'
 ```
-
 
 *2019 November 21*
 
