@@ -125,7 +125,7 @@ import remi.gui as gui
 from remi import start, App
 ```
 
-Subclass the `App` class and declare a `main` function that will be the entry point of the application. Inside the main function you have to <code>return</code> the root widget.
+子类别(Subclass) the `App` class 并声明(declare)将成为应用程序的入口点的'main' function。在 main function 内，您必须 <code> return </ code> the root widget。
 
 ```py
 class MyApp(App):
@@ -170,9 +170,9 @@ start(MyApp, address='127.0.0.1', port=8081, multiple_instance=False, enable_fil
 - keyfile: SSL 密匙文件
 - ssl_version: 认证版本 (i.e. ssl.PROTOCOL_TLSv1_2). 如果禁用SSL加密.
 
-All widgets constructors accept two standards**kwargs that are:
-- width: can be expressed as int (and is interpreted as a pixel) or as str (and you can specify the measuring unit like '10%')
-- height: can be expressed as int (and is interpreted as a pixel) or as str (and you can specify the measuring unit like '10%')
+所有 widgets 构造接受两个标准**关键参数如下：
+- width: 可以表示为 int (1 解释为1个像素) 也可以表达为 str (你可以指定测量单元就像这样'10%')
+- height: 可以表示为 int (同上) 也可以表达为 str(同上)
 
 事件与回调函数
 ===
