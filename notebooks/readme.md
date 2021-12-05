@@ -2,17 +2,17 @@
 
 ## Install
 
-In a virtual environment
+在一个虚拟环境中
 
 `pip install jupyterlab, jupyter-server-proxy`
 
-jupyter-server-proxy is the proxy we use for jupyter lab
+jupyter-server-proxy 是我们在 jupyter lab 中使用的代理
 
-Pythonnet needs Visual Studio Build Tools 2019 and needs github install in Windows
+Pythonnet 需要Visual Studio Build Tools 2019，并需要在Windows上安装github
 
 `pip install git+https://github.com/pythonnet/pythonnet.git`
 
-pip install pywebview
+`pip install pywebview`
 
 ## Notebooks
 
@@ -22,9 +22,9 @@ pip install pywebview
 
 ## Using...
 
-### Create a Proxy class
+### 创建一个代理类
 
-* 8085 is supposed to be the remi port on localhost
+* 8085 应该是本地的REMI端口
 
 ```python
 remiport = 8085
@@ -55,7 +55,7 @@ class MyApp(Editor):
  
 ```
 
-* start as usual
+* 像往常一样START
 
 ```python
 myRemi = Thread(target=start, 
@@ -67,8 +67,8 @@ myRemi = Thread(target=start,
                                  'update_interval':0.5, 
                                  'start_browser':False})
 ```
-If no overload provided, remi behaves as legacy
+如果没有显示过载, remi 表现正常
 
-## Disclaimer
+## 免责声明
 
-Only jupyter-server-proxy was tested, but other proxy should work
+只有 jupyter-server-proxy 测试了, 但是其他proxy应该也可以使用
